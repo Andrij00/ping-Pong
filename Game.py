@@ -1,25 +1,39 @@
 # підключення бібліотек
-
-from pygame import *
+з імпорту pygame *
 
 # клас-батько
-class GameSprite(sprite.Sprite):
-
-    def init(self):
-        pass
+клас GameSprite(спрайт. Спрайт):
+    def __init__(self):
+        перевал
     def reset(self):
-        pass
-
+        перевал
 # клас для ракеток
-
-class Player (GameSprite):
+клас гравця (GameSprite):
     def update_right(self):
-        pass 
+        перевал
     def update_left(self):
-        pass
+        перевал
+    
+win_width = 600 # ширина вікна
+win_height = 500 # висота вікна
 
-win_width =600 # window width 
-win_height = 500 # window height
-window display.set_mode ((win_width, win_height))
-fon =(200,255, 255)
-window.fill(fon)
+вікно = дисплей. set_mode(((win_width, win_height)) # встановити ширину і висоту вікна
+fon = (200, 255, 255) # колір для фону гри 
+вікно. fill(fon) # залити фон певним кольором
+
+# прапорці, які відповідають за стан гри
+гра = Правда
+завершення = хибність
+
+годинник = час. Годинник() # годинник 
+FPS = 60 #кількість кадрів в секунду
+
+# ігровий цикл
+Під час гри:
+    для е в події. get(): # перевірка всіх подій
+        якщо е. type == QUIT: # тип подій - закрити вікно
+            гра = False # закінчуємо цикл в той час як
+    якщо закінчити != Вірно:
+        вікно. заливка(фон))
+    дисплей. оновлювати()
+    годинників. тік(FPS))
