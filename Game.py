@@ -1,0 +1,25 @@
+# підключення бібліотек
+
+from pygame import *
+
+# клас-батько
+class GameSprite(sprite.Sprite):
+
+    def init(self):
+        pass
+    def reset(self):
+        pass
+
+# клас для ракеток
+
+class Player (GameSprite):
+    def update_right(self):
+        pass 
+    def update_left(self):
+        pass
+
+win_width =600 # window width 
+win_height = 500 # window height
+window display.set_mode ((win_width, win_height))
+fon =(200,255, 255)
+window.fill(fon)
