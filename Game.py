@@ -3,17 +3,29 @@ from pygame import *
 
 # клас-батько
 class GameSprite(sprite.Sprite):
-    def __init__(self):
-        pass
-    def reset(self):
-        pass
+    def __init__(self,player_image, p_x, p_y, p_speed, width, height):
+        super().init()
+    self.image = transform.scale(image.load(player_image), (width, height))
+    self.speed= p_speed
+    self.rect = self.image.get_rect()
+    self.rect.x = P_X
+    self.rect.y = p_y
+def reset(self):
+    window.blit(self.image,(self.rect.x, self.rect.y)|
 # клас для ракеток
 class Player(GameSprite):
     def update_right(self):
-        pass
+        keys = key.get_pressed()
+        if [K_UP] and self.rect.y > 5:
+            self.rect.y -= self.speed
+        if [K_UP] and self.rect.y < 420:
+            self.rect.y += self.speed
     def update_left(self):
         pass
-    
+                
+racket_right = Player("roc.png",520,200,4,50,150)
+#racket_left = Player("roc.png",520,200,4,50,150)
+ball=GameSprite("ball.png",200,200,4,50,50)
 win_width = 600  # window width
 win_height = 500 # window height
 
@@ -35,5 +47,8 @@ while game:
             game = False   # закінчуємо цикл while
     if finish != True:
         window.fill(fon)
+        racket_right.update_right()
+        racket_right.reset()
+        ball.reset()
     display.update()
     clock.tick(FPS)
