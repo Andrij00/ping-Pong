@@ -11,7 +11,7 @@ class GameSprite(sprite.Sprite):
     self.rect.x = P_X
     self.rect.y = p_y
 def reset(self):
-    window.blit(self.image,(self.rect.x, self.rect.y)|
+    window.blit(self.image,(self.rect.x, self.rect.y)
 # клас для ракеток
 class Player(GameSprite):
     def update_right(self):
