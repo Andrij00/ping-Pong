@@ -5,11 +5,11 @@ from pygame import *
 class GameSprite(sprite.Sprite):
     def __init__(self,player_image, p_x, p_y, p_speed, width, height):
         super().init()
-    self.image = transform.scale(image.load(player_image), (width, height))
-    self.speed= p_speed
-    self.rect = self.image.get_rect()
-    self.rect.x = P_X
-    self.rect.y = p_y
+        self.image = transform.scale(image.load(player_image), (width, height))
+        self.speed= p_speed
+        self.rect = self.image.get_rect()
+        self.rect.x = P_X
+        self.rect.y = p_y
 def reset(self):
     window.blit(self.image,(self.rect.x, self.rect.y))
 # клас для ракеток
