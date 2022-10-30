@@ -4,7 +4,7 @@ from pygame import *
 # клас-батько
 class GameSprite(sprite.Sprite):
     def __init__(self,player_image, p_x, p_y, p_speed, width, height):
-        super().init()
+        super().__init__()
         self.image = transform.scale(image.load(player_image), (width, height))
         self.speed= p_speed
         self.rect = self.image.get_rect()
