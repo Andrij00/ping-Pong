@@ -27,8 +27,8 @@ class Player(GameSprite):
         if [K_s] and self.rect.y < 420:
             self.rect.y += self.speed
             
-racket_right = Player("roc.png",520,200,4,50,150)
-racket_left = Player("roc.png",30,200,4,50,150)
+racket_right = Player("roc.png",520,200,4,70,130)
+racket_left = Player("roc.png",30,200,4,70,130)
 ball=GameSprite("ball.png",200,200,4,50,50)
 win_width = 600  # window width
 win_height = 500 # window height
