@@ -53,7 +53,13 @@ while game:
     if finish != True:
         window.fill(fon)
         racket_right.update_right()
+        racket_left.update_left()
+        ball.rect.y += speed_x
+        ball.rect.y += speed_y
+        if ball.rect.y > win_height-50 or ball.rect .y < 0:
+            speed_y *= -1
         racket_right.reset()
+        racket_left.reset()
         ball.reset()
     display.update()
     clock.tick(FPS)
