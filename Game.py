@@ -26,7 +26,6 @@ class Player(GameSprite):
             self.rect.y -= self.speed
         if [K_s] and self.rect.y < 420:
             self.rect.y += self.speed
-
                 
 racket_right = Player("roc.png",520,200,4,50,150)
 racket_left = Player("roc.png",30,200,4,50,150)
