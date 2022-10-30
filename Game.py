@@ -8,7 +8,7 @@ class GameSprite(sprite.Sprite):
         self.image = transform.scale(image.load(player_image), (width, height))
         self.speed= p_speed
         self.rect = self.image.get_rect()
-        self.rect.x = P_X
+        self.rect.x = p_x
         self.rect.y = p_y
 def reset(self):
     window.blit(self.image,(self.rect.x, self.rect.y))
