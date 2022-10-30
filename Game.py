@@ -43,7 +43,8 @@ finish = False
 
 clock = time.Clock() # годинник 
 FPS = 60 #кількість кадрів в секунду
-
+speed_x=3
+speed_y=3
 # ігровий цикл
 while game:
     for e in event.get():  # перевірка всіх подій
